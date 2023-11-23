@@ -1,0 +1,23 @@
+
+[project]
+name = "Greetings"
+version = "0.1.0"
+readme = "README.md"
+license = { file = "LICENSE.md" }
+dependencies = [
+    "art",
+    "pyyaml",
+]
+
+[project.scripts]
+greet = "greetings.command:process"
+
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]>=6.2", "wheel"]
+
+[tool.setuptools.packages.find]
+include = ["greetings*"]
+exclude = ["tests*"]
+
+# Add setuptools_scm if you need to generate version numbers from the git hash
+#[tool.setuptools_scm]

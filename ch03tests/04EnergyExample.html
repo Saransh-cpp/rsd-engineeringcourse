@@ -1,0 +1,784 @@
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="lt-ie9 lt-ie8 no-js"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="lt-ie9 no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset=utf-8 />
+    <meta name="author" content="UCL" />
+    <meta name="description" content="UCL Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- social meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@uclnews">
+    <meta name="twitter:title" content="UCL - London's Global University">
+    <meta name="twitter:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students.">
+    <meta name="twitter:creator" content="@UCLWAMS">
+    <meta name="twitter:image:src" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png">
+    <meta property="og:image" content="http://www.ucl.ac.uk/visual-identity/logos/standalone.png" />
+    <meta property="og:title" content="UCL - London's Global University" />
+    <meta property="og:url" content="http://www.ucl.ac.uk" />
+    <meta property="og:site_name" content="UCL" />
+    <meta property="og:description" content="UCL (University College London) is London's leading multidisciplinary university, with 8,000 staff and 25,000 students." />
+    <meta property="og:type" content="website" />
+    <meta property="og:profile_id" content="uclofficial" />
+    <!-- end social meta -->
+
+  <title>Energy Example</title>
+
+  <link href="/rsd-engineeringcourse/assets/css/screen.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/rsd-engineeringcourse/assets/css/jekyll-styles.css" rel="stylesheet" type="text/css">
+  <link href="/rsd-engineeringcourse/site-styles/local_styles.css" rel="stylesheet" type="text/css">
+  <link href="/rsd-engineeringcourse/site-styles/ipython.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/rsd-engineeringcourse/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/rsd-engineeringcourse/favicon-152.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="/rsd-engineeringcourse/favicon-144.png">
+
+  <script src="/rsd-engineeringcourse/assets/js/lib/modernizr-custom.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    <script>
+      var cuttingTheMustard = document.querySelector && window.localStorage && window.addEventListener;
+
+      Modernizr.load({
+        //cutting the mustard as used by the BBC
+        test: cuttingTheMustard
+        //if old browser load the shiv
+        ,
+        nope: [
+          '/rsd-engineeringcourse/assets/js/lib/html5shiv-printshiv.min.js', '/rsd-engineeringcourse/assets/js/lib/respond.min.js'
+        ]
+      });
+      //set conditional assets for main.js
+      var globalSiteSpecificVars = {
+        pathToJquery: "/rsd-engineeringcourse/assets/js/lib/jquery-1.9.1.min",
+        googleAnalyticsIdsArray: [] //specify array of site specific id's NOT UCL generic UA-943297-1
+      }
+      if (cuttingTheMustard) {
+        globalSiteSpecificVars.pathToJquery = '/rsd-engineeringcourse/assets/js/lib/jquery-2.1.1.min';
+      }
+    </script>
+    <script src="/rsd-engineeringcourse/assets/js/lib/require.min.js"></script>
+    <script src="/rsd-engineeringcourse/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/rsd-engineeringcourse/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+</head>
+
+<body id="index" class="layout-vertical layout-vertical--nav-1col">
+
+  <header class="header header--desktop">
+
+  <a class="header__close" href="#">
+    <img src="/rsd-engineeringcourse/assets/images/close.png" class="lazy" data-src="//static.ucl.ac.uk/indigo/images/close.png" alt="X" />Close</a>
+
+  <div class="masthead">
+
+  <div class="wrapper clearfix">
+
+      <div class="masthead__search">
+					<form action="#" method="get">
+						<div class="search-form">
+							<input type="search" placeholder="Search UCL websites, people and more" class="search-form__input search-form__input--search" value="">
+						</div>
+						<input type="submit" name="sumbit" value="Go" class="btn search-form__input search-form__input--submit" />
+					</form>
+				</div>
+
+
+				<nav class="masthead__nav m-clear">
+					<ul class="masthead__list">
+						<li class="masthead__item"><a href="index.php" class="masthead__link">UCL Home</a>
+						</li>
+						<li class="masthead__item"><a href="prospective-students.php" class="masthead__link">Prospective students</a>
+						</li>
+						<li class="masthead__item"><a href="current-students.php" class="masthead__link">Current students</a>
+						</li>
+						<li class="masthead__item"><a href="staff.php" class="masthead__link">Staff</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+</div><!-- end .masthead -->
+
+
+  <div class="wrapper">
+
+    <div class="photograph">
+  <div class="brand">
+    <p class="brand__heading">COMP0233: Research Software Engineering With Python</p>
+    <a href="/" class="brand__link"><span class="visually-hidden">Home</span></a>
+    <img src="//cdn.ucl.ac.uk/img/blank.gif" data-src="//static.ucl.ac.uk/indigo/images/ucl-logo.svg" alt="UCL logo" id="logo" class="brand__logo lazy">  
+  </div>
+</div>
+
+
+    <div class="sidebar">
+
+      <nav class="nav nav--mobile">
+        <ul>
+          
+
+ <li class="active"> <a href="/rsd-engineeringcourse/ch00git/">Version Control</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/01Intro.html">Introduction to Version Control</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/02Solo.html">Solo Git</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/03Mistakes.html">Fixing Mistakes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/04Publishing.html">Publishing</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/05Collaboration.html">Collaboration</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/06ForkAndPull.html">Fork and Pull</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/10Branches.html">Branches</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/11Miscellany.html">Git miscellany</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/12Remotes.html">Remotes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/13Rebase.html">Rebase</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/14Bisect.html">Bisect</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch01python/">Introduction to Python</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/023types.html">Types</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/038SolutionComprehension.html">Maze comprehension solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/04functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/050import.html">Modules</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/101Classes.html">Classes</a> </li></ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch02data/">Research Data in Python</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/060files.html">Working with files</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/061internet.html">Internet</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/062csv.html">CSV</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/064JsonYamlXML.html">Structured data files</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/065MazeSaved.html">Maze Files Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/066QuakeExercise.html">Earthquakes Exercise</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/068QuakesSolution.html">Quakes Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/070hdf5.html">Scientific File Formats</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/072plotting.html">Plotting</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/082NumPy.html">Numerical Python</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/084Boids.html">The Boids</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/110Capstone.html">Understanding the Exemplar</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch03tests/">Testing</a><ul> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/01testingbasics.html">Testing Basics</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/02SaskatchewanFields.html">The Fields of Saskatchewan</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/03pytest.html">Test Frameworks</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/04EnergyExample.html">Energy Example</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/05Mocks.html">Mocks</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/06Debugger.html">Debugger</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/07CI.html">Continuous Integration</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/08DiffusionExample.html">Diffusion Example</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch04packaging/">Software Projects</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/010Installation.html">Installing Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/01Libraries.html">Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/025TextFiles.html">Writing Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/02Argparse.html">Argparse</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/03Packaging.html">Packaging</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/04documentation.html">Documentation</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/05Process.html">Agile and Waterfall</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/06Issues.html">Issue Tracking</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/07Licensing.html">Licensing</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch05construction/">Construction and Design</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/01introduction.html">Construction</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/02conventions.html">Coding Conventions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/03comments.html">Comments</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/05refactoring.html">Refactoring</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/06objects.html">Object Refactorings</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/08objects.html">Object Oriented Design</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/09patterns.html">Design Patterns</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/10boids.html">Exercise - Boids</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch07dry/">Advanced Programming Techniques</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/01intro.html">Don't Repeat Yourself</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/020Functional.html">Functional Programming</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/025Iterators.html">Iterators, Generators, Decorators, and Contexts</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/040Exceptions.html">Exceptions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/049Operators.html">Operator Overloading</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/050OperatorsExample.html">Operator Overloading (example)</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/060Metaprogramming.html">Metaprogramming</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch08performance/">Programming for Speed</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/010intro.html">Two Mandelbrots</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/015mandels.html">Faster Mandelbrots?</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/020numpy.html">NumPy</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/040cython.html">Cython</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/050scaling.html">Scaling</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/session99/">Installation</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/linux.html">Linux</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/mac.html">Mac OSX</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/windows.html">Windows</a> </li></ul> </li> 
+
+        </ul>
+      </nav>
+
+      <nav class="nav nav--left">
+        <ul>
+          
+
+ <li class="active"> <a href="/rsd-engineeringcourse/ch00git/">Version Control</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/01Intro.html">Introduction to Version Control</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/02Solo.html">Solo Git</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/03Mistakes.html">Fixing Mistakes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/04Publishing.html">Publishing</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/05Collaboration.html">Collaboration</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/06ForkAndPull.html">Fork and Pull</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/10Branches.html">Branches</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/11Miscellany.html">Git miscellany</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/12Remotes.html">Remotes</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/13Rebase.html">Rebase</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch00git/14Bisect.html">Bisect</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch01python/">Introduction to Python</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/00pythons.html">Many kinds of Python</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/010exemplar.html">An example program</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/015variables.html">Variables</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/016using_functions.html">Using Functions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/023types.html">Types</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/025containers.html">Containers</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/028dictionaries.html">Dictionaries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/029structures.html">Structures</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/030MazeSolution.html">Maze Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/032conditionality.html">Conditionality</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/035looping.html">Looping</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/036MazeSolution2.html">Maze Control Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/037comprehensions.html">Comprehensions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/038SolutionComprehension.html">Maze comprehension solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/04functions.html">Defining functions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/050import.html">Modules</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch01python/101Classes.html">Classes</a> </li></ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch02data/">Research Data in Python</a><ul><li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/060files.html">Working with files</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/061internet.html">Internet</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/062csv.html">CSV</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/064JsonYamlXML.html">Structured data files</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/065MazeSaved.html">Maze Files Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/066QuakeExercise.html">Earthquakes Exercise</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/068QuakesSolution.html">Quakes Solution</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/070hdf5.html">Scientific File Formats</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/072plotting.html">Plotting</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/082NumPy.html">Numerical Python</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/084Boids.html">The Boids</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch02data/110Capstone.html">Understanding the Exemplar</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch03tests/">Testing</a><ul> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/01testingbasics.html">Testing Basics</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/02SaskatchewanFields.html">The Fields of Saskatchewan</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/03pytest.html">Test Frameworks</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/04EnergyExample.html">Energy Example</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/05Mocks.html">Mocks</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/06Debugger.html">Debugger</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/07CI.html">Continuous Integration</a> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch03tests/08DiffusionExample.html">Diffusion Example</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch04packaging/">Software Projects</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/010Installation.html">Installing Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/01Libraries.html">Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/025TextFiles.html">Writing Libraries</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/02Argparse.html">Argparse</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/03Packaging.html">Packaging</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/04documentation.html">Documentation</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/05Process.html">Agile and Waterfall</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/06Issues.html">Issue Tracking</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch04packaging/07Licensing.html">Licensing</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch05construction/">Construction and Design</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/01introduction.html">Construction</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/02conventions.html">Coding Conventions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/03comments.html">Comments</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/05refactoring.html">Refactoring</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/06objects.html">Object Refactorings</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/08objects.html">Object Oriented Design</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/09patterns.html">Design Patterns</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch05construction/10boids.html">Exercise - Boids</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/ch07dry/">Advanced Programming Techniques</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/01intro.html">Don't Repeat Yourself</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/020Functional.html">Functional Programming</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/025Iterators.html">Iterators, Generators, Decorators, and Contexts</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/040Exceptions.html">Exceptions</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/049Operators.html">Operator Overloading</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/050OperatorsExample.html">Operator Overloading (example)</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch07dry/060Metaprogramming.html">Metaprogramming</a> </li> </ul> </li><li class="active"> <a href="/rsd-engineeringcourse/ch08performance/">Programming for Speed</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/010intro.html">Two Mandelbrots</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/015mandels.html">Faster Mandelbrots?</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/020numpy.html">NumPy</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/040cython.html">Cython</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/ch08performance/050scaling.html">Scaling</a> </li> </ul> </li> <li class="active"> <a href="/rsd-engineeringcourse/session99/">Installation</a><ul> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/linux.html">Linux</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/mac.html">Mac OSX</a> </li> <li class="inactive"> <a href="/rsd-engineeringcourse/session99/windows.html">Windows</a> </li></ul> </li> 
+
+        </ul>
+      </nav>
+
+    </div>
+    <!-- end .sidebar -->
+
+    <nav class="nav nav--top">
+      <ul>
+        
+      </ul>
+    </nav>
+
+  </div>
+  <!-- end .wrapper -->
+
+  </header>
+  <!-- end .header -->
+
+  <div class="site-content wrapper">
+
+    <header class="header header--mobile default-header">
+      <a class="header__open" href="#">
+        <img src="/rsd-engineeringcourse/assets/images/ucl-menu.svg" alt="Menu" />
+      </a>
+    </header>
+
+    <div class="site-content__inner clearfix">
+      <div class="site-content__body">
+
+          
+            <nav class="breadcrumb clearfix">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="http://www.ucl.ac.uk/">UCL</a></li>
+
+  
+    <li class="breadcrumb__item"><a href="https://www.ucl.ac.uk/arc">Advanced Research Computing</a></li>
+  
+    <li class="breadcrumb__item"><a href="https://www.ucl.ac.uk/advanced-research-computing/about-our-training">Training</a></li>
+  
+
+<li class="breadcrumb__item"><a href="/rsd-engineeringcourse/">COMP0233</a></li>
+
+
+
+              </ul>
+            </nav>
+           <div class="site-content__main">
+            
+               <div id="slidelink">
+                 <a href="/rsd-engineeringcourse/ch03tests/04EnergyExample.ipynb">Notebook download</a>
+               </div>
+            
+            
+          
+          
+
+    <div class="cell border-box-sizing text_cell rendered" id="cell-id=5a3bf7c7"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Classroom-exercise:-energy-calculation">Classroom exercise: energy calculation<a class="anchor-link" href="#Classroom-exercise:-energy-calculation">¶</a></h2><h3 id="Diffusion-model-in-1D">Diffusion model in 1D<a class="anchor-link" href="#Diffusion-model-in-1D">¶</a></h3><p>Description: A one-dimensional diffusion model. (Could be a gas of particles, or a bunch of crowded people in a corridor, or animals in a valley habitat...)</p>
+<ul>
+<li>Agents are on a 1d axis</li>
+<li>Agents do not want to be where there are other agents</li>
+<li>This is represented as an 'energy': the higher the energy, the more unhappy the agents.</li>
+</ul>
+<p>Implementation:</p>
+<ul>
+<li>Given a vector $n$ of positive integers, and of arbitrary length</li>
+<li>Compute the energy, $E(n) = \sum_i n_i(n_i - 1)$</li>
+<li>Later, we will have the likelyhood of an agent moving depend on the change in energy.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=0a23b117">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">density</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">density</span><span class="p">)),</span> <span class="n">density</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xrange</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">density</span><span class="p">)</span><span class="o">-</span><span class="mf">0.5</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Particle count $n_i$"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Position $i$"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0.5, 0, 'Position $i$')</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img alt="No description has been provided for this image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAi0AAAGxCAYAAACupYbXAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuNCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8WgzjOAAAACXBIWXMAAA9hAAAPYQGoP6dpAAAnvklEQVR4nO3de3hU9YH/8c+QZCaBXAQkQkpuXATDJSgBnhixCBQ2Rdba52FZHtBw0W0xFjDlFncRoysDboug63JbbttKoWsLWl1kIRVYETBcgkApioLJQjBUJANRh5CZ3x/9MWuAIDmZ4cw3vF/Pc57H851z+RylD59+58w5Dr/f7xcAAECYa2Z3AAAAgBtBaQEAAEagtAAAACNQWgAAgBEoLQAAwAiUFgAAYARKCwAAMEKk3QGCyefz6dSpU4qLi5PD4bA7DgAAuAF+v1/nz59XUlKSmjWrfz6lSZWWU6dOKTk52e4YAADAgvLycrVv377ez5tUaYmLi5P014uOj4+3OQ0AALgRHo9HycnJgb/H69OkSsvlr4Ti4+MpLQAAGOa7bu3gRlwAAGAESgsAADACpQUAABiB0gIAAIxAaQEAAEagtAAAACNQWgAAgBEoLQAAwAiUFgAAYARKCwAAMAKlBQAAGCFsSkttba1mzZql9PR0xcTEqGPHjnr++efl9/vtjgYAAMJA2Lwwcd68eVq0aJFWr16tbt26ac+ePRo3bpwSEhI0adIku+MBAACbhU1pef/99/XQQw9p2LBhkqS0tDT95je/0QcffGBzMgAAEA7C5uuhe++9V8XFxfroo48kSQcOHNB7772n3Nzcevfxer3yeDx1FgAA0DSFzUzLzJkz5fF41LVrV0VERKi2tlYvvPCCRo8eXe8+brdbRUVFNzElgHCTNvNtuyNYdmLuMLsjAEYJm5mW3/72t3rttde0Zs0a7du3T6tXr9YvfvELrV69ut59CgsLVVVVFVjKy8tvYmIAAHAzhc1My7Rp0zRz5kz9/d//vSSpR48e+uyzz+R2u5WXl3fNfVwul1wu182MCQAAbBI2My1fffWVmjWrGyciIkI+n8+mRAAAIJyEzUzL8OHD9cILLyglJUXdunXT/v37NX/+fI0fP97uaAAAIAyETWl55ZVXNGvWLD3xxBOqrKxUUlKSfvKTn+iZZ56xOxoAAAgDYVNa4uLitGDBAi1YsMDuKAAAIAyFzT0tAAAA10NpAQAARqC0AAAAI1BaAACAESgtAADACJQWAABgBEoLAAAwAqUFAAAYgdICAACMQGkBAABGoLQAAAAjUFoAAIARKC0AAMAIlBYAAGAESgsAADACpQUAABiB0gIAAIxAaQEAAEagtAAAACNQWgAAgBEoLQAAwAiUFgAAYARKCwAAMAKlBQAAGIHSAgAAjEBpAQAARqC0AAAAI1BaAACAESgtAADACJQWAABgBEoLAAAwAqUFAAAYgdICAACMEDalJS0tTQ6H46olPz/f7mgAACAMRNod4LKSkhLV1tYG1g8dOqQf/OAHGjFihI2pAABAuAib0tKmTZs663PnzlXHjh31/e9/36ZEAAAgnIRNafm2ixcv6te//rUKCgrkcDjq3c7r9crr9QbWPR7PzYgHAABsEDb3tHzbhg0bdO7cOY0dO/a627ndbiUkJASW5OTkmxMQAADcdGFZWpYvX67c3FwlJSVdd7vCwkJVVVUFlvLy8puUEAAA3Gxh9/XQZ599pi1btuj3v//9d27rcrnkcrluQioAAGC3sJtpWblypRITEzVs2DC7owAAgDASVqXF5/Np5cqVysvLU2Rk2E0CAQAAG4VVadmyZYvKyso0fvx4u6MAAIAwE1bTGUOGDJHf77c7BgAACENhNdMCAABQH0oLAAAwAqUFAAAYgdICAACMQGkBAABGoLQAAAAjUFoAAIARKC0AAMAIlBYAAGAESgsAADACpQUAABiB0gIAAIxAaQEAAEagtAAAACNQWgAAgBEoLQAAwAiUFgAAYARKCwAAMAKlBQAAGIHSAgAAjEBpAQAARqC0AAAAI1BaAACAESgtAADACJQWAABgBEoLAAAwAqUFAAAYgdICAACMQGkBAABGoLQAAAAjUFoAAIARKC0AAMAIlBYAAGCEsCotJ0+e1JgxY9S6dWvFxMSoR48e2rNnj92xAABAGIi0O8BlX375pXJycvTAAw9o48aNatOmjT7++GO1bNnS7mgAACAMhE1pmTdvnpKTk7Vy5crAWHp6uo2JAABAOAmbr4fefPNNZWVlacSIEUpMTNTdd9+tZcuWXXcfr9crj8dTZwEAAE1T2JSWTz/9VIsWLVLnzp21adMmTZw4UZMmTdLq1avr3cftdishISGwJCcn38TEAADgZnL4/X6/3SEkyel0KisrS++//35gbNKkSSopKdHOnTuvuY/X65XX6w2sezweJScnq6qqSvHx8SHPDMB+aTPftjuCZSfmDrM7AhAWPB6PEhISvvPv77CZaWnXrp0yMjLqjN11110qKyurdx+Xy6X4+Pg6CwAAaJrCprTk5OTo6NGjdcY++ugjpaam2pQIAACEk7ApLU899ZR27dqlOXPm6NixY1qzZo2WLl2q/Px8u6MBAIAwEDalpU+fPlq/fr1+85vfqHv37nr++ee1YMECjR492u5oAAAgDITNc1ok6cEHH9SDDz5odwwAABCGwmamBQAA4HooLQAAwAiUFgAAYARKCwAAMAKlBQAAGIHSAgAAjEBpAQAARqC0AAAAI1BaAACAESgtAADACJQWAABgBEoLAAAwAqUFAAAYgdICAACMQGkBAABGoLQAAAAjUFoAAIARKC0AAMAIjSotL730kiTp8OHDqq2tDUogAACAa4lszM69evWSJD399NP685//rJiYGHXr1k09evRQ9+7d9eCDDwYjIwAAQONKywMPPCBJeuONNyRJFy5c0OHDh3Xw4EFt2bKF0gIAAIKmUaXlSrGxserXr5/69esXzMMCAABYKy0lJSWaOXOmzpw5o06dOqlXr16BJSUlJdgZAQAArN2I+8gjjygiIkL/8A//oPT0dG3btk3jxo1TWlqaWrduHeyMAAAA1mZaysvL9fbbb6tjx451xj/77DOVlpYGIxcAAEAdlkpLdna2Tp48eVVpSU1NVWpqalCCAQAAfJulr4eeeuopPffcczp79myw8wAAAFyTpZmW4cOHy+Fw6M4779RDDz2k7Oxs3X333erRo4ecTmewMwIAAFgrLceOHdOBAwcCy5w5c3TixAlFRUWpS5cu+vDDD4OdEwAA3OIslZYOHTqoQ4cOevjhhwNjHo9HBw4coLAAAICQCNrD5eLj49W/f3/1798/WIcEAAAI4C3PAADACJQWAABgBEulpaysTH6//6pxv9+vsrIyS0GeffZZORyOOkvXrl0tHQsAADQ9lu5pSU9PV0VFhRITE+uMnz17Vunp6aqtrbUUplu3btqyZcv/hYsM6vscAQCAwSy1Ar/fL4fDcdX4hQsXFB0dbT1MZKTatm1reX8AANB0Nai0FBQUSJIcDodmzZql5s2bBz6rra3V7t271atXL8thPv74YyUlJSk6OlrZ2dlyu93XfWu0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dNWSl5dnd7Sgudb1SfKvXLnS7mhBNX78eH9qaqrf6XT627Rp4x80aJD/v//7v+2OdVM0xZ88jxw50t+uXTu/0+n0f+973/OPHDnSf+zYMbtjhcQf/vAHf/fu3f0ul8vftWtX/9KlS+2OFBKbNm3yS/IfPXrU7igh4/D7/X576hIAAMCN454WAABgBEoLAAAwAqUFAAAYgdICAACMQGkBAABGoLQAAAAjUFoAAIARKC0AAMAIlBYAAGAESguAsDJgwABNmTKl0dsEw09+8hONHj065OcBcGN4jD+ABhk7dqxWr14tSYqKilJKSooeffRRPf3000F5SdvZs2cVFRWluLg4DRgwQL169dKCBQvq3SaUzp49K5fLpRYtWoT0PABuTBN9DSSAUPqbv/kbrVy5Ul6vV//1X/+l/Px8RUVFqbCwsNHHbtWqVVC2CYabdR4AN4avhwA0mMvlUtu2bZWamqqJEydq8ODBevPNNyVJXq9XkyZNUmJioqKjo3XfffeppKQksO/rr7+uHj16KCYmRq1bt9bgwYNVXV0d+PzyVz9jx47Vtm3btHDhQjkcDjkcDp04caLONpd91zkHDBigSZMmafr06WrVqpXatm2rZ5999rrXeOLEiTrnBGA/SguARouJidHFixclSdOnT9fvfvc7rV69Wvv27VOnTp00dOhQnT17VhUVFRo1apTGjx+vI0eOaOvWrfrxj3+sa31LvXDhQmVnZ+vxxx9XRUWFKioqlJycfM3zX++cl61evVotWrTQ7t279eKLL+q5557T5s2b672mAwcO6LbbblNaWlrj/uUACBpKCwDL/H6/tmzZok2bNmngwIGqrq7WokWL9C//8i/Kzc1VRkaGli1bppiYGC1fvlwVFRW6dOmSfvzjHystLU09evTQE088odjY2KuOnZCQIKfTqebNm6tt27Zq27atIiIirtruu855Wc+ePTV79mx17txZjz76qLKyslRcXFzvtZWWlqpnz57B+RcFICgoLQAa7K233lJsbKyio6OVm5urkSNH6tlnn9Unn3yimpoa5eTkBLaNiopS3759deTIEWVmZmrQoEHq0aOHRowYoWXLlunLL79sVJbvOudlVxaQdu3aqbKyst7jHjhwQL169WpUNgDBRWkB0GAPPPCASktL9fHHH+vrr78OfPXyXSIiIrR582Zt3LhRGRkZeuWVV9SlSxcdP3485JmjoqLqrDscDvl8vnq3Ly0tVWZmZqhjAWgASguABmvRooU6deqklJSUOj9z7tixo5xOp3bs2BEYq6mpUUlJiTIyMiT9tSzk5OSoqKhI+/fvl9Pp1Pr16695HqfTqdra2utmuZFzNpTH49GJEyeYaQHCDD95BhA0LVq00MSJEzVt2jS1atVKKSkpevHFF/XVV19pwoQJ2r17t4qLizVkyBAlJiZq9+7dOnPmjO66665rHi8tLU27d+/WiRMnFBsbq1atWqlZs2YNOqcVBw4cUEREhLp162ZpfwChQWkBEFRz586Vz+fTI488ovPnzysrK0ubNm1Sy5YtFR8fr+3bt2vBggXyeDxKTU3VL3/5S+Xm5l7zWFOnTlVeXp4yMjL09ddf6/jx49f8Nc/1zmnFgQMH1LVrV7lcLkv7AwgNnogLAACMwD0tAADACJQWAABgBEoLAAAwAqUFAAAYgdICAACMQGkBAABGoLQAAAAjUFoAAIARKC0AAMAIlBYAAGAESgsAADDC/wO6KdDvVgmuLgAAAABJRU5ErkJggg=="/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=2443e341"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here, the total energy due to position 2 is $3 (3-1)=6$, and due to column 7 is $1 (1-1)=0$. We need to sum these to get the
+total energy.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=5b6385ab"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Starting-point">Starting point<a class="anchor-link" href="#Starting-point">¶</a></h3><p>Create a Python module:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=0b9814a7">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span>%%bash
+mkdir<span class="w"> </span>-p<span class="w"> </span>diffusion
+touch<span class="w"> </span>diffusion/__init__.py
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=30af1755"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Implementation file: diffusion_model.py</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=1046c207">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> diffusion/model.py
+<span class="k">def</span> <span class="nf">energy</span><span class="p">(</span><span class="n">density</span><span class="p">,</span> <span class="n">coeff</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">""" </span>
+<span class="sd">    Energy associated with the diffusion model</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    density: array of positive integers</span>
+<span class="sd">        Number of particles at each position i in the array</span>
+<span class="sd">    coeff: float</span>
+<span class="sd">        Diffusion coefficient.</span>
+<span class="sd">    """</span>
+  <span class="c1"># implementation goes here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing diffusion/model.py
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=dde3da5b"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Testing file: test_diffusion_model.py</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=67110743">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> diffusion/test_model.py
+<span class="kn">from</span> <span class="nn">.model</span> <span class="kn">import</span> <span class="n">energy</span>
+<span class="k">def</span> <span class="nf">test_energy</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">""" Optional description for reporting """</span>
+    <span class="c1"># Test something</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing diffusion/test_model.py
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=aa2fd0d6"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Invoke the tests:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=3667799f">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span>%%bash
+<span class="nb">cd</span><span class="w"> </span>diffusion
+pytest
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.18, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/rsd-engineeringcourse/rsd-engineeringcourse/ch03tests/diffusion
+plugins: cov-4.1.0, anyio-3.7.1
+collected 1 item
+
+test_model.py <span class="ansi-green-fg">.</span><span class="ansi-green-fg">                                                          [100%]</span>
+
+<span class="ansi-green-fg">============================== </span><span class="ansi-green-intense-fg ansi-bold">1 passed</span><span class="ansi-green-fg"> in 0.01s</span><span class="ansi-green-fg"> ===============================</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=ed31f0c9"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, write your code (in <code>model.py</code>), and tests (in <code>test_model.py</code>), testing as you do.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=c767c8f3"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Solution">Solution<a class="anchor-link" href="#Solution">¶</a></h3><p>Don't look until after you've tried!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=44e0210e">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> diffusion/model.py
+<span class="sd">"""  Simplistic 1-dimensional diffusion model """</span>
+
+<span class="k">def</span> <span class="nf">energy</span><span class="p">(</span><span class="n">density</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">""" </span>
+<span class="sd">    Energy associated with the diffusion model</span>
+<span class="sd">    </span>
+<span class="sd">    :Parameters:</span>
+<span class="sd">    </span>
+<span class="sd">    density: array of positive integers</span>
+<span class="sd">      Number of particles at each position i in the array/geometry</span>
+<span class="sd">    """</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span><span class="p">,</span> <span class="nb">any</span><span class="p">,</span> <span class="nb">sum</span>
+
+    <span class="c1"># Make sure input is an numpy array</span>
+    <span class="n">density</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">density</span><span class="p">)</span>
+
+    <span class="c1"># ...of the right kind (integer). Unless it is zero length, </span>
+    <span class="c1">#    in which case type does not matter.</span>
+      
+    <span class="k">if</span> <span class="n">density</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">kind</span> <span class="o">!=</span> <span class="s1">'i'</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">density</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Density should be a array of *integers*."</span><span class="p">)</span>
+    <span class="c1"># and the right values (positive or null)</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">density</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Density should be an array of *positive* integers."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">density</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"Density should be an a *1-dimensional*"</span> <span class="o">+</span> 
+                         <span class="s2">"array of positive integers."</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">density</span> <span class="o">*</span> <span class="p">(</span><span class="n">density</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting diffusion/model.py
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=9af7da30">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">%%writefile</span> diffusion/test_model.py
+<span class="sd">""" Unit tests for a diffusion model """</span>
+
+<span class="kn">from</span> <span class="nn">pytest</span> <span class="kn">import</span> <span class="n">raises</span>
+<span class="kn">from</span> <span class="nn">.model</span> <span class="kn">import</span> <span class="n">energy</span>
+
+<span class="k">def</span> <span class="nf">test_energy_fails_on_non_integer_density</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span> 
+        <span class="n">energy</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+    
+<span class="k">def</span> <span class="nf">test_energy_fails_on_negative_density</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span> <span class="n">energy</span><span class="p">(</span>
+            <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+        
+<span class="k">def</span> <span class="nf">test_energy_fails_ndimensional_density</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span> <span class="n">energy</span><span class="p">(</span>
+            <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+
+<span class="k">def</span> <span class="nf">test_zero_energy_cases</span><span class="p">():</span>
+    <span class="c1"># Zero energy at zero density</span>
+    <span class="n">densities</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="p">]</span>
+    <span class="k">for</span> <span class="n">density</span> <span class="ow">in</span> <span class="n">densities</span><span class="p">:</span> 
+        <span class="k">assert</span> <span class="n">energy</span><span class="p">(</span><span class="n">density</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">test_derivative</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+    <span class="c1"># Loop over vectors of different sizes (but not empty)</span>
+    <span class="k">for</span> <span class="n">vector_size</span> <span class="ow">in</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span> 
+
+        <span class="c1"># Create random density of size N</span>
+        <span class="n">density</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">vector_size</span><span class="p">)</span>
+
+        <span class="c1"># will do derivative at this index</span>
+        <span class="n">element_index</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="n">vector_size</span><span class="p">)</span>
+
+        <span class="c1"># modified densities</span>
+        <span class="n">density_plus_one</span> <span class="o">=</span> <span class="n">density</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">density_plus_one</span><span class="p">[</span><span class="n">element_index</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="c1"># Compute and check result</span>
+        <span class="c1"># d(n^2-1)/dn = 2n</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">density</span><span class="p">[</span><span class="n">element_index</span><span class="p">]</span> 
+                    <span class="k">if</span> <span class="n">density</span><span class="p">[</span><span class="n">element_index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> 
+                    <span class="k">else</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="n">actual</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">density_plus_one</span><span class="p">)</span> <span class="o">-</span> <span class="n">energy</span><span class="p">(</span><span class="n">density</span><span class="p">)</span> 
+        <span class="k">assert</span> <span class="n">expected</span> <span class="o">==</span> <span class="n">actual</span>
+
+<span class="k">def</span> <span class="nf">test_derivative_no_self_energy</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">""" If particle is alone, then its participation to energy is zero """</span>
+    <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
+
+    <span class="n">density</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">density_plus_one</span> <span class="o">=</span> <span class="n">density</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">density</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span> 
+
+    <span class="n">expected</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">actual</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">density_plus_one</span><span class="p">)</span> <span class="o">-</span> <span class="n">energy</span><span class="p">(</span><span class="n">density</span><span class="p">)</span> 
+    <span class="k">assert</span> <span class="n">expected</span> <span class="o">==</span> <span class="n">actual</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Overwriting diffusion/test_model.py
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=eb4fbadf">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span>%%bash
+<span class="nb">cd</span><span class="w"> </span>diffusion
+pytest
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.18, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/rsd-engineeringcourse/rsd-engineeringcourse/ch03tests/diffusion
+plugins: cov-4.1.0, anyio-3.7.1
+collected 6 items
+
+test_model.py <span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">                                                     [100%]</span>
+
+<span class="ansi-green-fg">============================== </span><span class="ansi-green-intense-fg ansi-bold">6 passed</span><span class="ansi-green-fg"> in 0.10s</span><span class="ansi-green-fg"> ===============================</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=d0c8f392"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Coverage">Coverage<a class="anchor-link" href="#Coverage">¶</a></h3><p>With py.test, you can use the <a href="https://github.com/pytest-dev/pytest-cov">"pytest-cov" plugin</a> to measure test coverage</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=81741218">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span>%%bash
+<span class="nb">cd</span><span class="w"> </span>diffusion
+pytest<span class="w"> </span>--cov<span class="o">=</span><span class="s2">"diffusion"</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.18, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/rsd-engineeringcourse/rsd-engineeringcourse/ch03tests/diffusion
+plugins: cov-4.1.0, anyio-3.7.1
+collected 6 items
+
+test_model.py <span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">                                                     [100%]</span>
+
+---------- coverage: platform linux, python 3.8.18-final-0 -----------
+Name            Stmts   Miss  Cover
+-----------------------------------
+__init__.py         0      0   100%
+model.py           10      0   100%
+test_model.py      31      0   100%
+-----------------------------------
+TOTAL              41      0   100%
+
+
+<span class="ansi-green-fg">============================== </span><span class="ansi-green-intense-fg ansi-bold">6 passed</span><span class="ansi-green-fg"> in 0.15s</span><span class="ansi-green-fg"> ===============================</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=97901f87"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or an html report:</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=168f4b35">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span>%%bash
+<span class="nb">cd</span><span class="w"> </span>diffusion
+pytest<span class="w"> </span>--cov<span class="o">=</span><span class="s2">"diffusion"</span><span class="w"> </span>--cov-report<span class="w"> </span>html
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.8.18, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/rsd-engineeringcourse/rsd-engineeringcourse/ch03tests/diffusion
+plugins: cov-4.1.0, anyio-3.7.1
+collected 6 items
+
+test_model.py <span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">.</span><span class="ansi-green-fg">                                                     [100%]</span>
+
+---------- coverage: platform linux, python 3.8.18-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+<span class="ansi-green-fg">============================== </span><span class="ansi-green-intense-fg ansi-bold">6 passed</span><span class="ansi-green-fg"> in 0.22s</span><span class="ansi-green-fg"> ===============================</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered" id="cell-id=fd3ab7d4"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Look at the <a href="diffusion/htmlcov/index.html">coverage results</a></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered" id="cell-id=94127270">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end .site-content -->
+
+  <footer class="footer wrapper">
+  <div class="footer__inner clearfix">
+             <article class="block block--col-1">
+                <h2 class="as-h5">Facilities</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/departments/faculties">Faculties and departments</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/library/">Library</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/museums">Museums and Collections</a></li>
+					<li class="footer__item"><a href="http://www.thebloomsbury.com/">UCL Bloomsbury Theatre</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/maps">Maps and buildings</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-2">
+                <h2 class="as-h5">Locations</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/london">UCL and London</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/australia">UCL Australia</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/qatar">UCL Qatar</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/global">UCL Global</a></li>
+				</ul>
+            </article>
+            <article class="block block--col-3">
+                <h2 class="as-h5">Connect with us</h2>
+                <ul class="footer__list list-unstyled">
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/alumni">Alumni</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/enterprise">Businesses</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/media">Media Relations</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/hr/jobs/">Jobs</a></li>
+					<li class="footer__item"><a href="http://www.ucl.ac.uk/makeyourmark">Give to UCL</a></li>
+				</ul>
+
+      </article>
+  
+    <hr class="clear">
+    <ul class="footer__list list-unstyled zero-bottom">
+      <li class="footer__item text-muted small">University College London,&nbsp;Gower Street,&nbsp;London,&nbsp;WC1E 6BT&nbsp;Tel:&nbsp;+44&nbsp;(0)&nbsp;20 7679 2000</li>
+    </ul>
+    <ul class="list-inline footer__list list-unstyled list-inline--divided">
+      <li class="text-muted small">Copyright © 2023-11-23 09:21:01 +0000 UCL</li>
+      <li class="text-muted small"><a href="#">Disclaimer</a>
+      </li>
+      <li class="text-muted small"><a href="#">Freedom of Information</a>
+      </li>
+      <li class="text-muted small"><a href="#">Accessibility</a>
+      </li>
+      <li class="text-muted small"><a href="#">Privacy</a>
+      </li>
+      <li class="text-muted small"><a href="#">Cookies</a>
+      </li>
+      <li class="text-muted small"><a href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="/rsd-engineeringcourse/assets/js/lib/require.min.js"></script>
+  <script src="/rsd-engineeringcourse/assets/js/main.js"></script>
+    <script>
+      require.config({
+        baseUrl: '/rsd-engineeringcourse/assets/js/lib'
+      });
+        require(["app/general", "app/searchWithAutoComplete", "app/tabs"]);//load the default stuff
+    </script>
+
+</body>
+
+</html>
+
